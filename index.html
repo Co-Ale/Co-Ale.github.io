@@ -18,7 +18,7 @@
         <span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
     </div>
     <br> </br>
-    <input value="EXAMPLE" type="text" id="codice" placeholder="inserire codice" maxlength="128"  minlength="0" required oninput="allowOnlyNumbers(this)"/>
+    <input value="EXAMPLE" type="text" id="codice" placeholder="inserire codice" maxlength="128"  minlength="0" required oninput="inputFilter(this)"/>
     <div>
     <select id="type" onchange="inputControl()">
         <option value="CODE128">code128</option>

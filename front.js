@@ -41,9 +41,11 @@ function inputControl(){ // controllo del input in base al tipo di codice che si
 }
 
 
-function allowOnlyNumbers(inputElement) {
+function inputFilter(inputElement) {
   if(document.getElementById("type").value!="CODE128"){
     inputElement.value = inputElement.value.replace(/[^0-9]/g, '');
+  }else{
+    inputElement.value = inputElement.value.replace(/[^\x00-\x7F]/g, "");
   }
 
 }
